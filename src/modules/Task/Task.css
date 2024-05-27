@@ -1,0 +1,33 @@
+.task-card{
+    background-color: red;
+    border-radius: 20px;
+    width: 310px;
+    height: 140px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.task-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.task-date-cont{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+.task-btn{
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+.task-name{
+    color: #fff;
+    padding: 10px 0;
+}
