@@ -25,6 +25,7 @@ nav ul li{
         height: 60px;
         display: flex;
         justify-content: center;
+        position: fixed;
     }
     nav ul{
         display: flex;
