@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../../../public/backgrounds/01.svg);
+    background-image: url(./backgrounds/01.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
