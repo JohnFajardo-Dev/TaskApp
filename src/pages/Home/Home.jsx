@@ -17,6 +17,11 @@ function Home() {
               <p>Register</p>
             </Link>
           </button>
+          <button className="register-btn">
+            <Link to="/tasks">
+              <p>DEMO</p>
+            </Link>
+          </button>
         </article>
       </section>
     </section>
