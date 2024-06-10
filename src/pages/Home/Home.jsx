@@ -8,10 +8,14 @@ function Home() {
         <h1>Wellcome to TaskApp</h1>
         <article className="home-btns">
           <button className="login-btn">
-            <Link to="/login">Login</Link>
+            <Link to="/login">
+              <p>Login</p>
+            </Link>
           </button>
           <button className="register-btn">
-            <Link to="/register">Register</Link>
+            <Link to="/register">
+              <p>Register</p>
+            </Link>
           </button>
         </article>
       </section>

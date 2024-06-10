@@ -32,6 +32,7 @@
 .home-cont h1{
     margin: 1rem 0;
     color: #fff;
+    font-size: 25px;
 }
 
 .login-btn, .register-btn{
@@ -39,4 +40,11 @@
     border-radius: 20px;
     border: none;
     width: fit-content;
+}
+
+.login-btn p, .register-btn p{
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
 }
