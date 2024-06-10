@@ -1,5 +1,21 @@
+/* Colors */
+.yellow{
+    background-color: #FFC857;
+}
+.black-blue{
+    background-color: #084C61;
+}
+.white-blue{
+    background-color: #177E89;
+}
+.black{
+    background-color: #323031;
+}
+.red{
+    background-color: #DB3A34;
+}
+
 .task-card{
-    background-color: red;
     border-radius: 20px;
     width: 310px;
     height: 140px;
@@ -18,6 +34,9 @@
     padding: 5px 10px;
     width: fit-content;
 }
+.task-date{
+    font-weight:bold;
+}
 
 .task-btn{
     border-radius: 20px;
@@ -29,5 +48,6 @@
 
 .task-name{
     color: #fff;
-    padding: 10px 0;
+    padding: 10px 5px;
+    font-weight: bolder;
 }

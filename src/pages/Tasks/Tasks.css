@@ -1,0 +1,28 @@
+.tasks-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+@media (width <= 900px){
+    .tasks-cont{
+        flex-direction: column;
+        margin: auto;
+    }
+    .day-target{
+        margin: auto;
+    }
+}
+
+.day-target{
+    background-color: #F0F0F0;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+    height: fit-content;
+}
+
+.day-target h2{
+    font-size: 30px;
+    font-weight: bold;
+}

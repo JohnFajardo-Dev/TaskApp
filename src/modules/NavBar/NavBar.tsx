@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 import {FaTasks} from "react-icons/fa"
 import { GoHomeFill } from "react-icons/go";
 import { FaCalendarAlt } from "react-icons/fa";
+import { IoSettingsSharp} from "react-icons/io5";
 
 function NavBar() {
   return (
@@ -15,6 +16,7 @@ function NavBar() {
             <li><Link to="/"><GoHomeFill /></Link></li>
             <li><Link to="/tasks"><FaTasks/></Link></li>
             <li><Link to="/calendar"><FaCalendarAlt /></Link></li>
+            <li><Link to="/settings"><IoSettingsSharp /></Link></li>
         </ul>
     </nav>
         </IconContext.Provider>

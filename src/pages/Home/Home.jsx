@@ -5,6 +5,7 @@ function Home() {
     <section className="Home">
       <section className="home-cont">
         <h1>Hello!</h1>
+        <h1>Wellcome to TaskApp</h1>
         <article className="home-btns">
           <button className="login-btn">
             <Link to="/login">Login</Link>
