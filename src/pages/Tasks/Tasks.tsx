@@ -1,29 +1,25 @@
-import React from 'react'
-import "./Tasks.css"
-import NavBar from '../../modules/NavBar/NavBar'
+import React, { useState } from 'react';
+import "./Tasks.css";
+import NavBar from '../../modules/NavBar/NavBar';
+import TaskList from '../../modules/TaskList/TaskList';
+import AddTaskForm from '../../modules/AddTaskForm/AddTaskForm';
 
-import TaskList from '../../modules/TaskList/TaskList'
-import AddTaskForm from '../../modules/AddTaskForm/AddTaskForm'
+function getTasksFromLocalStorage() {
+  const tasksJSON = localStorage.getItem('tasks');
+  if (!tasksJSON) return [];
+  return JSON.parse(tasksJSON);
+}
 
-function Tasks() {
-const tasks = [
-  { id: 1, color:'yellow', name: 'Tarea 1', date:"7:00 AM"},
-
-  { id: 2, color:'black-blue', name: 'Tarea 2', date:"7:00 AM"},
-];
-
-localStorage.setItem('tasks', JSON.stringify(tasks));
-
+export default function Tasks() {
+  const [tasks, setTasks] = useState(getTasksFromLocalStorage());
 
   return (
     <main>
-        <NavBar/>
-        <section className='tasks-cont'>
-          <TaskList>
-          <AddTaskForm  >
-        </section>
+      <NavBar />
+      <section className='tasks-cont'>
+        <TaskList tasks={tasks} setTasks={setTasks} />
+        <AddTaskForm setTasks={setTasks} tasks={tasks} />
+      </section>
     </main>
-  )
+  );
 }
-
-export default Tasks

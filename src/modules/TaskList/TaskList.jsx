@@ -1,54 +1,36 @@
-import React from "react";
-import Task from "../Task/Task";
+import React, { useEffect } from "react";
+import "./Task.css";
 
-import useState from "react";
-
-function TaskList() {
-  const [tasks, setTasks] = useState([]);
-
+function TaskList({ tasks, setTasks }) {
   useEffect(() => {
     const storedTasks = localStorage.getItem('tasks');
-    if (storedTasks){ 
-      setTasks(JSON.parse(storedTasks))
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
     }
-  }, []);
+  }, [setTasks]);
 
-  const handleToggleTask = (taskId) = {
-    setTasks((prevTasks)=> 
-      prevTasks.map((task)=>{
-        if(task.id ===taskId){
-          return {...task,completed:!task.completed}
-        }
-        return task
-      })
-    )
-  }
-  
-  const handleDeleteTask = (taskId)=>{
-    setTasks((prevTasks)=>prevTasks.filter((task)=> task.id !==taskId))
-  }
-  
-  
+  const handleDeleteTask = (taskId) => {
+    const updatedTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(updatedTasks);
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+  };
+
   return (
-<article className='day-target'>
-      {task.map((task) => (
-
-
-    <article key={task.id} className={`task-card ${task.color}`}>
-      <div className="task-cont">
-        <div className="task-date-cont">
-          <p className="task-date">{task.date}</p>
-        </div>
-        <h3 className="task-name">{task.name}</h3>
-        <button onClick={()=> handleDeleteTask(task.id)} className="task-btn">
-          <h3>Confirm</h3>
-        </button>
-      </div>
-    </article>
-
-
+    <article className='day-target'>
+      {tasks.map((task) => (
+        <article key={task.id} className={`task-card ${task.color}`}>
+          <div className="task-cont">
+            <div className="task-date-cont">
+              <p className="task-date">{task.date}</p>
+            </div>
+            <h3 className="task-name">{task.name}</h3>
+            <button onClick={() => handleDeleteTask(task.id)} className="task-btn">
+              <h3>Confirm</h3>
+            </button>
+          </div>
+        </article>
       ))}
-</article>
+    </article>
   );
 }
 
