@@ -2,7 +2,7 @@
     width: fit-content;
     height: min-content;
     position: absolute;
-    background-color: #F0F0F0F0;
+    background-color: var(--main-ui-color);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -11,6 +11,7 @@
     margin: 2rem;
     right: 0;
     text-align: center;
+    color: #fff;
 }   
 
 .add-task-form input, select{

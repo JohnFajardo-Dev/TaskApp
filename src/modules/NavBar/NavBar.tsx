@@ -9,10 +9,11 @@ import { IoSettingsSharp} from "react-icons/io5";
 
 function NavBar() {
   return (
-    <IconContext.Provider value={{size:"2rem", color:"#000"}}>
+    <IconContext.Provider value={{size:"2rem", color:"#fff"}}>
     <nav>
         <ul>
             <li><Link to="/"><FaTasks/></Link></li>
+            <li><Link to="/add"><FaTasks/></Link></li>
         </ul>
     </nav>
         </IconContext.Provider>

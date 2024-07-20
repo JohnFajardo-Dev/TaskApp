@@ -3,7 +3,7 @@ import "./Task.css";
 
 function TaskList({ tasks, setTasks }) {
   useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks');
+    const storedTasks = localStorage.getItem("tasks");
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
     }
@@ -12,11 +12,11 @@ function TaskList({ tasks, setTasks }) {
   const handleDeleteTask = (taskId) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);
-    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
   return (
-    <article className='day-target'>
+    <article className="day-target">
       {tasks.map((task) => (
         <article key={task.id} className={`task-card ${task.color}`}>
           <div className="task-cont">
@@ -24,8 +24,11 @@ function TaskList({ tasks, setTasks }) {
               <p className="task-date">{task.date}</p>
             </div>
             <h3 className="task-name">{task.name}</h3>
-            <button onClick={() => handleDeleteTask(task.id)} className="task-btn">
-              <h3>Confirm</h3>
+            <button
+              onClick={() => handleDeleteTask(task.id)}
+              className="task-btn"
+            >
+              <h3>Delete</h3>
             </button>
           </div>
         </article>
