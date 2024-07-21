@@ -1,7 +1,6 @@
 .add-task-form{
     width: fit-content;
     height: min-content;
-    position: absolute;
     background-color: var(--main-ui-color);
     display: flex;
     flex-direction: column;

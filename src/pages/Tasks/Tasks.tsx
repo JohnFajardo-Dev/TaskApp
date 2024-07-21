@@ -18,9 +18,9 @@ export default function Tasks() {
       <header>
         <NavBar />
       </header>
+        <AddTaskForm setTasks={setTasks} tasks={tasks} />
       <section className='tasks-cont'>
         <TaskList tasks={tasks} setTasks={setTasks} />
-        <AddTaskForm setTasks={setTasks} tasks={tasks} />
       </section>
     </main>
   );
