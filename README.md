@@ -1,2 +1,3 @@
 # TaskApp
-![89_1x_shots_so](https://github.com/user-attachments/assets/eb5f6009-deb4-4cb2-83a5-0f16fcb7e72c)
+
+![TaskApp](https://github.com/user-attachments/assets/70d725a7-f742-4fab-b301-31a3f1e8656a)
