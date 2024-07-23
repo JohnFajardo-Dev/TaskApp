@@ -14,14 +14,8 @@ export default function Tasks() {
   const [tasks, setTasks] = useState(getTasksFromLocalStorage());
 
   return (
-    <main>
-      <header>
-        <NavBar />
-      </header>
-        <AddTaskForm setTasks={setTasks} tasks={tasks} />
       <section className='tasks-cont'>
         <TaskList tasks={tasks} setTasks={setTasks} />
       </section>
-    </main>
   );
 }

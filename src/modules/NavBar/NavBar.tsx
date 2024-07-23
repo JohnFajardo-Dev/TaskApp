@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import "./NavBar.css"
 // Icons
 import { IconContext } from "react-icons";
-import {FaTasks} from "react-icons/fa"
-import { FaCalendarAlt } from "react-icons/fa";
+import { CiViewList } from "react-icons/ci";
+import { IoIosAdd } from "react-icons/io";
+
 import { IoSettingsSharp} from "react-icons/io5";
 
 function NavBar() {
@@ -12,8 +13,9 @@ function NavBar() {
     <IconContext.Provider value={{size:"2rem", color:"#fff"}}>
     <nav>
         <ul>
-            <li><Link to="/"><FaTasks/></Link></li>
-            <li><Link to="/add"><FaTasks/></Link></li>
+          <li><a href="https://johnfajardodev.netlify.app/" target='_blank' rel="noopener noreferrer" ><h1 className='name'>JF</h1></a></li>
+            <li><Link to="/"><CiViewList /></Link></li>
+            <li><Link to="/add"><IoIosAdd /></Link></li>
         </ul>
     </nav>
         </IconContext.Provider>
