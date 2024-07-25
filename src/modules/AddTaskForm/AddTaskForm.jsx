@@ -6,7 +6,7 @@ function AddTaskForm({ setTasks, tasks }) {
   const [newTaskName, setNewTaskName] = useState("");
   const [newDate, setNewDate] = useState("");
   const [newTime, setNewTime] = useState("");
-  const [taskColor, setTaskColor] = useState("yellow"); // Estado para el color de la tarea
+  const [taskColor, setTaskColor] = useState(""); // Estado para el color de la tarea
 
   const handleSubmit = (event) => {
     event.preventDefault();
