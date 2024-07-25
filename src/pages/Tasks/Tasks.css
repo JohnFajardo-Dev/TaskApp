@@ -2,29 +2,37 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
 }
 
 
-@media (width <= 900px){
-    .tasks-cont{
-        margin: 80px auto;
-        flex-direction: column;
-    }
-    .day-target{
-        margin: auto;
-    }
-}
+
 
 .day-target{
     background-color: var(--main-ui-color);
-    padding: 2rem 1rem;
     border-radius: 20px;
-    margin: 1rem 0;
-    height: fit-content;
-
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-items: center;
 }
 
 .day-target h2{
     font-size: 30px;
     font-weight: bold;
+}
+
+@media (width <= 900px){
+    .tasks-cont{
+        flex-direction: column;
+    }
+    .day-target{
+        margin: 1rem;
+        flex-wrap: inherit;
+        width: fit-content;
+    }
 }

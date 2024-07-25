@@ -22,6 +22,7 @@ function TaskList({ tasks, setTasks }) {
           <div className="task-cont">
             <div className="task-date-cont">
               <p className="task-date">{task.date}</p>
+              <p className="task-date">{task.time}</p>
             </div>
             <h3 className="task-name">{task.name}</h3>
             <button

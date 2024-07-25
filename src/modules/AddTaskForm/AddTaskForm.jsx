@@ -5,6 +5,7 @@ import "./AddTaskForm.css";
 function AddTaskForm({ setTasks, tasks }) {
   const [newTaskName, setNewTaskName] = useState("");
   const [newDate, setNewDate] = useState("");
+  const [newTime, setNewTime] = useState("");
   const [taskColor, setTaskColor] = useState("yellow"); // Estado para el color de la tarea
 
   const handleSubmit = (event) => {
@@ -18,6 +19,7 @@ function AddTaskForm({ setTasks, tasks }) {
         name: newTaskName,
         color: taskColor,
         date: newDate,
+        time: newTime,
       };
       const updatedTasks = [...tasks, newTask];
       setTasks(updatedTasks);
@@ -31,20 +33,31 @@ function AddTaskForm({ setTasks, tasks }) {
     <form className="add-task-form" onSubmit={handleSubmit}>
       <h2>Add your Task</h2>
       <input
-        type="text"
+        type="date"
         value={newDate}
         onChange={(event) => setNewDate(event.target.value)}
         placeholder="Date"
+        name="date-input"
+        required
+      />
+      <input
+        type="time"
+        onChange={(event) => setNewTime(event.target.value)}
+        placeholder={"Time"}
+        value={newTime}
+        required
       />
       <input
         type="text"
         value={newTaskName}
         onChange={(event) => setNewTaskName(event.target.value)}
         placeholder="Title"
+        required
       />
       <select
         value={taskColor}
         onChange={(event) => setTaskColor(event.target.value)}
+        required
       >
         <option value="yellow">Yellow</option>
         <option value="black-blue">Black Blue</option>
@@ -52,7 +65,7 @@ function AddTaskForm({ setTasks, tasks }) {
         <option value="black">Black</option>
         <option value="red">Red</option>
       </select>
-      <button type="submit">Add</button>
+      <button type="submit">Add Task</button>
     </form>
   );
 }

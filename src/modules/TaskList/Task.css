@@ -18,9 +18,9 @@
 .task-card{
     border-radius: 20px;
     width: 310px;
-    height: 140px;
+    height: fit-content;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 1rem;
 }
 
 .task-cont{
@@ -29,12 +29,15 @@
 }
 
 .task-date-cont{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+.task-date{
     background-color: #fff;
     border-radius: 20px;
     padding: 5px 10px;
     width: fit-content;
-}
-.task-date{
     font-weight:bold;
 }
 

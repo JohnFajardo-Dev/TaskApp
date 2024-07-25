@@ -3,13 +3,18 @@ import "./App.css";
 // Pages
 import Tasks from "./pages/Tasks/Tasks";
 import AddTask from "./pages/AddTask/AddTask";
-
+import NavBar from "./modules/NavBar/NavBar";
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Tasks />} />
-      <Route path="/add" element={<AddTask />} />
-    </Routes>
+    <main>
+      <header>
+        <NavBar />
+      </header>
+      <Routes>
+        <Route path="/" element={<Tasks />} />
+        <Route path="/add" element={<AddTask />} />
+      </Routes>
+    </main>
   );
 }
 
