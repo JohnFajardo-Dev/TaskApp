@@ -1,5 +1,5 @@
 import AddTaskForm from "../../modules/AddTaskForm/AddTaskForm";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function getTasksFromLocalStorage() {
   const tasksJSON = localStorage.getItem("tasks");
@@ -10,7 +10,7 @@ function getTasksFromLocalStorage() {
 function AddTask() {
   const [tasks, setTasks] = useState(getTasksFromLocalStorage());
   return (
-    <div>
+    <div className="taskform-cont">
       <AddTaskForm tasks={tasks} setTasks={setTasks} />
     </div>
   );
