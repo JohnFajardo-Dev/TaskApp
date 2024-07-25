@@ -13,6 +13,14 @@
     color: #fff;
 }   
 
+
+.add-task-form > div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+}
+
 .add-task-form input, select{
     padding: 0.5rem 1rem;
     border: 2px solid #F0F0F0F0;
