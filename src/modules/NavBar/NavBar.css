@@ -4,13 +4,11 @@ nav{
     width: 70px;
     height: fit-content;
     background-color: var(--main-ui-color);
-    margin: 1rem;
     border-radius: 20px;
 }
 
 nav ul{
     display: flex;
-    margin: 1rem 0;
     justify-content: center;
     flex-direction: column;
     text-align: center;

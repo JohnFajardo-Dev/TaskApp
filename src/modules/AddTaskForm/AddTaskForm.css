@@ -1,5 +1,4 @@
 .add-task-form{
-    width: fit-content;
     height: min-content;
     background-color: var(--main-ui-color);
     display: flex;
@@ -7,7 +6,6 @@
     gap: 1rem;
     border-radius: 20px;
     padding: 5rem;
-    margin: 1rem;
     right: 0;
     text-align: center;
     color: #fff;
