@@ -1,14 +1,19 @@
+// Library
 import React, { useEffect } from "react";
+// CSS
 import "./TaskList.css";
 
+// TaskList
 function TaskList({ tasks, setTasks }) {
   useEffect(() => {
+    // Save tasks from localStorage in storedTasks const
     const storedTasks = localStorage.getItem("tasks");
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
     }
   }, [setTasks]);
 
+  // Delete Task
   const handleDeleteTask = (taskId) => {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks);

@@ -1,9 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+// CSS
 import "./App.css";
+// Librarys
+import { Routes, Route } from "react-router-dom";
 // Pages
 import Tasks from "./pages/Tasks/Tasks";
 import AddTask from "./pages/AddTask/AddTask";
+// Modules
 import NavBar from "./modules/NavBar/NavBar";
+
 function App() {
   return (
     <main>

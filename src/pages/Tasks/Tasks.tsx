@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+// CSS
 import "./Tasks.css";
+// Librarys
+import React, { useState } from 'react';
+// Components
 import TaskList from '../../modules/TaskList/TaskList';
 
+
+// receives tasks from localstorage
 function getTasksFromLocalStorage() {
+  // Save tasks in tasksJSON const from localStorage
   const tasksJSON = localStorage.getItem('tasks');
+  // if is empty create and return
   if (!tasksJSON) return [];
   return JSON.parse(tasksJSON);
 }

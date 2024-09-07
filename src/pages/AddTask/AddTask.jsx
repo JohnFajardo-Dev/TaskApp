@@ -1,6 +1,10 @@
-import AddTaskForm from "../../modules/AddTaskForm/AddTaskForm";
 import { useState } from "react";
+// CSS
+import "./AddTask.css";
+// Components
+import AddTaskForm from "../../modules/AddTaskForm/AddTaskForm";
 
+// Get Task from localstorage
 function getTasksFromLocalStorage() {
   const tasksJSON = localStorage.getItem("tasks");
   if (!tasksJSON) return [];

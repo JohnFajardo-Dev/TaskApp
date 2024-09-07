@@ -1,7 +1,9 @@
+// Library
 import React, { useState } from "react";
-
+// CSS
 import "./AddTaskForm.css";
 
+// AddTask Form
 function AddTaskForm({ setTasks, tasks }) {
   const [newTaskName, setNewTaskName] = useState("");
   const [newDate, setNewDate] = useState("");
@@ -9,11 +11,13 @@ function AddTaskForm({ setTasks, tasks }) {
   const [taskColor, setTaskColor] = useState(""); // Estado para el color de la tarea
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent Default !!
     if (newTaskName.trim()) {
+      // Create Task Id
       const newTaskId = tasks.length
         ? Math.max(...tasks.map((task) => task.id)) + 1
         : 1;
+      // NewTasks Object
       const newTask = {
         id: newTaskId,
         name: newTaskName,
@@ -21,15 +25,17 @@ function AddTaskForm({ setTasks, tasks }) {
         date: newDate,
         time: newTime,
       };
-      const updatedTasks = [...tasks, newTask];
-      setTasks(updatedTasks);
-      localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+      // Save Tasks Section
+      const updatedTasks = [...tasks, newTask]; // Save tasks
+      setTasks(updatedTasks); // Set update tasks
+      localStorage.setItem("tasks", JSON.stringify(updatedTasks)); // Update tasks
       setNewTaskName(""); // Limpiar el campo de texto después de agregar la tarea
       setTaskColor(""); // Reiniciar el color al valor por defecto (opcional)
     }
   };
 
   return (
+    // Add Tasks Form
     <form className="add-task-form" onSubmit={handleSubmit}>
       <h2>Add your Task</h2>
       <div>

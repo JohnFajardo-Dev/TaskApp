@@ -1,15 +1,17 @@
+// Library
 import React from 'react'
 import { Link } from 'react-router-dom';
+// CSS
 import "./NavBar.css"
 // Icons
 import { IconContext } from "react-icons";
 import { CiViewList } from "react-icons/ci";
 import { IoIosAdd } from "react-icons/io";
 
-import { IoSettingsSharp} from "react-icons/io5";
 
 function NavBar() {
   return (
+    // Icon settings here
     <IconContext.Provider value={{size:"2rem", color:"#fff"}}>
     <nav>
         <ul>

@@ -1,4 +1,4 @@
-
+/* Tasks General Component */
 .tasks-full-cont{
     display: flex;
     flex-direction: column;
@@ -8,6 +8,14 @@
     height: 80vh;
 }
 
+.tasks-full-cont > h2{
+    color: #fff;
+    font-size: 40px;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+/*Task list cont  */
 .tasks-cont{
     display: flex;
     flex-direction: row;
@@ -17,47 +25,10 @@
     border-radius: 20px;
 }
 
-.tasks-full-cont > h2{
-    color: #fff;
-    font-size: 40px;
-    padding: 2rem;
-    padding-bottom: 0;
-}
-
-.day-target{
-    background-color: var(--main-ui-color);
-    border-radius: 20px;
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    align-items: baseline;
-}
-
-.day-target::-webkit-scrollbar{
-    width: 8px;
-}
-.day-target::-webkit-scrollbar-thumb{
-    background-color: #fff;
-    border-radius: 20px;
-}
-
-.day-target h2{
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    text-align: left;
-}
-
+/* Movil Style */
 @media (width <= 900px){
     .tasks-cont{
         flex-direction: column;
         padding: 0;
-    }
-    .day-target{
-        margin: 1rem;
-        flex-wrap: inherit;
-        width: fit-content;
-        min-height: 500px;
     }
 }

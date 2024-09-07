@@ -1,3 +1,4 @@
+/* Import Font from GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 nav{
@@ -7,7 +8,7 @@ nav{
     border-radius: 20px;
 }
 
-nav ul{
+nav > ul{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -15,7 +16,7 @@ nav ul{
     align-items: center;
 }
 
-nav ul li{
+nav > ul > li{
     width: fit-content;
     margin: 1rem 0;
 }
@@ -32,6 +33,7 @@ nav ul li{
     transition: all .2s ease;
 }
 
+/* Movil Style */
 @media (width <= 1000px){
     nav{
         width: fit-content;
@@ -40,7 +42,7 @@ nav ul li{
         justify-content: center;
         z-index: 1;
     }
-    nav ul{
+    nav > ul{
         display: flex;
         margin: 1rem 0;
         justify-content: center;
@@ -49,12 +51,12 @@ nav ul li{
         align-items: center;
     }
     
-    nav ul li{
+    nav > ul > li{
         width: fit-content;
         margin: 0 10px;
         padding: 1rem;
     }
-    nav ul li:hover{
+    nav > ul > li:hover{
         color: var(--main-ui-color);
     }
     .name{

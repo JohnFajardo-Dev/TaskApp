@@ -12,6 +12,35 @@
     background-color: #DB3A34;
 }
 
+/* Day Target */
+.day-target{
+    background-color: var(--main-ui-color);
+    border-radius: 20px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: baseline;
+}
+
+/* -Scroll */
+.day-target::-webkit-scrollbar{
+    width: 8px;
+}
+.day-target::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+/* -Text */
+.day-target h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+/* TaskCard */
 .task-card{
     border-radius: 20px;
     width: 310px;
@@ -19,17 +48,18 @@
     padding: 1rem;
     margin: 1rem;
 }
-
+/* -TaskCont */
 .task-cont{
     display: flex;
     flex-direction: column;
 }
-
+/* -Task date cont */
 .task-date-cont{
     display: flex;
     gap: 0.5rem;
     flex-direction: row;
 }
+/* -task date */
 .task-date{
     background-color: #fff;
     border-radius: 20px;
@@ -37,21 +67,30 @@
     width: fit-content;
     font-weight:bold;
 }
-
+/* -task button */
 .task-btn{
     border-radius: 20px;
     background-color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     width: fit-content;
-}
-
-.task-btn:hover{
+}.task-btn:hover{
     background-color: #d7d7d7;
 }
 
+/* task name */
 .task-name{
     color: #fff;
     padding: 15px 5px;
     font-weight: bolder;
+}
+
+/* Movil Style */
+@media (width <= 900px){
+    .day-target{
+        margin: 1rem;
+        flex-wrap: inherit;
+        width: fit-content;
+        min-height: 500px;
+    }
 }
