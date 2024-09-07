@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Task.css";
+import "./TaskList.css";
 
 function TaskList({ tasks, setTasks }) {
   useEffect(() => {

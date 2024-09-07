@@ -5,6 +5,7 @@
     background-color: var(--main-ui-color);
     border-radius: 20px;
     height: fit-content;
+    height: 80vh;
 }
 
 .tasks-cont{
@@ -20,6 +21,7 @@
     color: #fff;
     font-size: 40px;
     padding: 2rem;
+    padding-bottom: 0;
 }
 
 .day-target{
