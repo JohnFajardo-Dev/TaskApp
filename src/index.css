@@ -9,6 +9,8 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+    
+    transition: all .2s ease;
 }
 
 :root{
@@ -21,9 +23,10 @@ a{
 }
 
 button{
-    cursor: pointer;   
+    cursor: pointer;
 }
 
 body{
     background-color: var(--background-color);
+    transition: none;
 }

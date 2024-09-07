@@ -66,13 +66,13 @@ function AddTaskForm({ setTasks, tasks }) {
       <div>
         <label htmlFor="">Color Target Task</label>
         <select
-          value={taskColor}
           onChange={(event) => setTaskColor(event.target.value)}
+          value={taskColor}
           required
         >
-          <option value="black-blue">Black Blue</option>
-          <option value="white-blue">White Blue</option>
           <option value="black">Black</option>
+          <option value="white-blue">White Blue</option>
+          <option value="black-blue">Black Blue</option>
           <option value="red">Red</option>
         </select>
       </div>
